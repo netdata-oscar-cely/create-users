@@ -11,9 +11,7 @@ Este proyecto permite crear usuarios de manera masiva en Prisma Cloud utilizando
 ├── create_users.py         # Módulo para crear usuarios
 ├── login_cspm.py           # Módulo para autenticación con Prisma Cloud
 ├── usuarios.xlsx           # Archivo Excel con los datos de los usuarios
-├── user_roles.json         # Archivo JSON con los roles disponibles (opcional)
 ├── .env                    # Variables de entorno para la configuración
-├── requirements.txt        # Dependencias del proyecto
 └── README.md               # Documentación del proyecto
 ```
 
@@ -68,7 +66,7 @@ Crea un archivo `usuarios.xlsx` con las siguientes columnas:
 
 ### 5. Obtener roles disponibles (opcional)
 
-Usa el script `test_get_roles.py` (si lo has implementado) para obtener los roles disponibles en tu instancia de Prisma Cloud y guarda el resultado en `user_roles.json`.
+Usa el script `get_roles_information.py` para obtener los roles disponibles en tu instancia de Prisma Cloud y guarda el resultado en `info_roles.json`.
 
 ## Uso
 
