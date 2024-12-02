@@ -43,15 +43,7 @@ PRISMA_CLOUD_SECRET_KEY=<tu_secret_key>
 PRISMA_CLOUD_API_URL=https://api.prismacloud.io
 ```
 
-### 3. Instalar dependencias
-
-Instala las dependencias necesarias utilizando `pip`:
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Preparar el archivo Excel
+### 3. Preparar el archivo Excel
 
 Crea un archivo `usuarios.xlsx` con las siguientes columnas:
 
@@ -64,7 +56,7 @@ Crea un archivo `usuarios.xlsx` con las siguientes columnas:
 - **`defaultRoleId`**: Un ID que debe estar incluido en `roleIds`.
 - **`timeZone`**: Una zona horaria válida (por ejemplo, `UTC` o `America/Bogota`).
 
-### 5. Obtener roles disponibles (opcional)
+### 4. Obtener roles disponibles (opcional)
 
 Usa el script `get_roles_information.py` para obtener los roles disponibles en tu instancia de Prisma Cloud y guarda el resultado en `info_roles.json`.
 
