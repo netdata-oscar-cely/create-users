@@ -17,10 +17,12 @@ Este proyecto permite crear usuarios de manera masiva en Prisma Cloud utilizando
 
 ## Requisitos previos
 
-- **Python 3.8 o superior**: Asegúrate de tener Python instalado en tu sistema.
+- **Python 3.11 o superior**: Asegúrate de tener Python instalado en tu sistema.
 - **Credenciales de Prisma Cloud**:
   - `ACCESS_KEY_ID` y `SECRET_KEY` para la autenticación.
   - URL de la API de Prisma Cloud.
+
+
 
 ## Configuración
 
@@ -33,9 +35,9 @@ git clone <URL_DEL_REPOSITORIO>
 cd <NOMBRE_DEL_REPOSITORIO>
 ```
 
-### 2. Crear el archivo `.env`
+### 2. Renombrar el archivo `.env.example`
 
-Crea un archivo `.env` en la raíz del proyecto con las siguientes variables de entorno:
+Renombra el archivo `.env.example` a `.env` y ajusta con las siguientes variables de entorno:
 
 ```
 PRISMA_CLOUD_ACCESS_KEY_ID=<tu_access_key_id>
@@ -43,7 +45,24 @@ PRISMA_CLOUD_SECRET_KEY=<tu_secret_key>
 PRISMA_CLOUD_API_URL=https://api.prismacloud.io
 ```
 
-### 3. Preparar el archivo Excel
+### 3. Instalar de dependencias
+
+Crea el entorno virtual
+```bash
+python -m venv venv
+```
+
+Ubicate ahora sobre el entorno virtual
+```bash
+source venv/bin/activate
+```
+
+Instala las dependencias
+```bash
+pip install -r requireme
+```
+
+### 4. Preparar el archivo Excel
 
 Crea un archivo `usuarios.xlsx` con las siguientes columnas:
 
@@ -56,7 +75,7 @@ Crea un archivo `usuarios.xlsx` con las siguientes columnas:
 - **`defaultRoleId`**: Un ID que debe estar incluido en `roleIds`.
 - **`timeZone`**: Una zona horaria válida (por ejemplo, `UTC` o `America/Bogota`).
 
-### 4. Obtener roles disponibles (opcional)
+### 5. Obtener roles disponibles (opcional)
 
 Usa el script `get_roles_information.py` para obtener los roles disponibles en tu instancia de Prisma Cloud y guarda el resultado en `info_roles.json`.
 
