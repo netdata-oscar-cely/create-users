@@ -59,7 +59,7 @@ source venv/bin/activate
 
 Instala las dependencias
 ```bash
-pip install -r requireme
+pip install -r requirements.txt
 ```
 
 ### 4. Preparar el archivo Excel
